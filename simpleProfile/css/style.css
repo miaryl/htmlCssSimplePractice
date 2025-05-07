@@ -34,6 +34,13 @@ li{
     display: block;
 }
 
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto 100px;
@@ -59,6 +66,10 @@ HEADER
 #header li{
     margin-left: 30px;
 }
+#header li a {
+    color: #24292e;
+
+}
 #header li a:hover{
     opacity: 0.7;
 }
@@ -66,7 +77,48 @@ HEADER
 /*--------------------------------------------------------
 MAINVISUAL
 ---------------------------------------------------------*/
+#mainvisual {
+    margin-bottom: 80px;
+}
 
+#mainvisual img{
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+}
+/*--------------------------------------------------------
+ABOUT
+---------------------------------------------------------*/
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#about img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+#about .text{
+    text-align: left;
+}
+/*--------------------------------------------------------
+BICYCLE
+---------------------------------------------------------*/
+#bicycle ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bicycle li{
+    width: 32%;
+
+}
 /*--------------------------------------------------------
 FOOTER
 ---------------------------------------------------------*/
@@ -74,4 +126,38 @@ FOOTER
     font-size: 0.5erm;
     padding: 10px 0;
     text-align: center;
+}
+
+/*--------------------------------------------------------
+SP
+---------------------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+    /*--------------------------------------------------------
+      MAINVISUAL
+    ---------------------------------------------------------*/
+    #mainvisual img {
+        height: calc(100vh - 60px);
+    }
+    /*--------------------------------------------------------
+       ABOUT
+    ---------------------------------------------------------*/
+    #about .content {
+        flex-direction: column;
+    }
+    #about img{
+        margin-right: 0;
+    }
+    /*--------------------------------------------------------
+      BICYCLE
+    ---------------------------------------------------------*/
+    #bicycle ul{
+        flex-direction: column;
+    }
+    #bicycle li{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
 }
